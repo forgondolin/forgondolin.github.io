@@ -160,10 +160,10 @@ getSubtitle : Model -> Element Msg
 getSubtitle model =
     case model.theme of
         Light ->
-            text "Ideas start here..."
+            text "Praise Bartosz Milewski"
 
         Dark ->
-            text "#BeyondIdeas"
+            text "IPFS is Life"
 
         Dracula ->
             newTabLink [ getLinkHover model ] { url = "https://draculatheme.com/", label = row [] [ text "Inspired by Dracula", html svgDracula ] }

@@ -11223,9 +11223,9 @@ var $author$project$Main$getSubtitle = function (model) {
 	var _v0 = model.W;
 	switch (_v0) {
 		case 0:
-			return $mdgriffith$elm_ui$Element$text('Ideas start here...');
+			return $mdgriffith$elm_ui$Element$text('Praise Bartosz Milewski');
 		case 1:
-			return $mdgriffith$elm_ui$Element$text('#BeyondIdeas');
+			return $mdgriffith$elm_ui$Element$text('IPFS is Life');
 		default:
 			return A2(
 				$mdgriffith$elm_ui$Element$newTabLink,
