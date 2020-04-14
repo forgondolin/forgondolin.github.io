@@ -121,9 +121,7 @@ viewBody model =
                 -- Social Links (icons)
                 , viewSocialLinks model
 
-                -- Nav links (text)
-                , row [ Region.navigation, Font.light, Font.color palette.link, centerX, spacing 45, htmlAttribute <| class "nav-links" ]
-                    
+               
                 ]
 
             -- Footer
