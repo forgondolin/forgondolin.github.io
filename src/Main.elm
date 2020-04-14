@@ -123,9 +123,7 @@ viewBody model =
 
                 -- Nav links (text)
                 , row [ Region.navigation, Font.light, Font.color palette.link, centerX, spacing 45, htmlAttribute <| class "nav-links" ]
-                    [ newTabLink [ getLinkHover model ] { url = "https://medium.com/@tolkiano/", label = text "Blog" }
-                    , newTabLink [ getLinkHover model ] { url = "resume_jhuang.pdf", label = text "Resume" }
-                    ]
+                    
                 ]
 
             -- Footer
