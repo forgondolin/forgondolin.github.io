@@ -1,0 +1,13 @@
+footer a.footer-link,
+a.underline-link {
+  text-decoration: underline;
+}
+
+.headshot > img {
+  border-radius: 50%;
+  width: 14rem;
+}
+
+.draculaIcon {
+  padding-left: 8px;
+}
