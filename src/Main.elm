@@ -68,7 +68,7 @@ subscriptions _ =
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = "Tom Bombadil | Forn"
+    { title = " | Forn"
     , body = [ viewBody model ]
     }
 
@@ -95,17 +95,17 @@ viewBody model =
             -- Main content
             [ column [ centerX, centerY, spacing 42, paddingEach { edges | top = 10 }, Region.mainContent ]
                 [ image [ centerX, htmlAttribute <| class "headshot" ]
-                    { src = "public/bombadil.jpg", description = "Tom Bombadil" }
+                    { src = "public/fission.jpg", description = "Tom Bombadil" }
 
                 -- h1 and h2
                 , column [ spacing 10, centerX, Font.center ]
-                    [ el [ Region.heading 1, Font.size 48, centerX, Font.color palette.titleText ] <| text "Kaleb Alves"
+                    [ el [ Region.heading 1, Font.size 48, centerX, Font.color palette.titleText ] <| text ""
                     , el [ Region.heading 2, Font.size 20, centerX, Font.light, Font.italic, Font.color palette.secondaryText ] <| getSubtitle model
                     ]
 
                 -- Intro paragraph
                 , paragraph [ Font.center, Font.light, paddingXY 20 0, Font.size 15, centerX, spacing 10 ]
-                    [ text "Math bachelor and Information Engineer, Software Developer at DXC. Love Cyberpunk, Tolkien, History of literature, DSP, and Information Theory" ]
+                    [ text "" ]
 
                 -- Social Links (icons)
                 , viewSocialLinks model
@@ -142,17 +142,14 @@ viewBody model =
 
 
 
--- View Helpers
-
-
 getSubtitle : Model -> Element Msg
 getSubtitle model =
     case model.theme of
         Light ->
-            text "Praise Bartosz Milewski"
+            text "Because Math"
 
         Dark ->
-            text "IPFS is Life"
+            text "Fission Rocks"
 
         Dracula ->
             newTabLink [ getLinkHover model ] { url = "https://draculatheme.com/", label = row [] [ text "Inspired by Dracula", html svgDracula ] }
@@ -161,11 +158,11 @@ getSubtitle model =
 viewSocialLinks : Model -> Element Msg
 viewSocialLinks model =
     row [ spacing 25, centerX ]
-        [ newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Medium Blog" ] { url = "https://medium.com/@tolkiano/", label = faIcon "fab fa-medium-m" }
-        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Instagram" ] { url = "https://instagram.com/wintermutekl/", label = faIcon "fab fa-instagram" }
-        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Github" ] { url = "https://github.com/forgondolin/", label = faIcon "fab fa-github" }
-        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Email" ] { url = "mailto:kaleblucasalves@", label = faIcon "far fa-envelope" }
-        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "LinkedIn" ] { url = "https://www.linkedin.com/in/kaleb-alves-776b8910b/", label = faIcon "fab fa-linkedin-in" }
+        [ newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Fission Forum" ] { url = "https://talk.fission.codes/", label = faIcon "fab fa-medium-m" }
+        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Blog" ] { url = "https://blog.fission.codes/", label = faIcon "fab fa-instagram" }
+        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Github" ] { url = "https://github.com/fission-suite/", label = faIcon "fab fa-github" }
+       -- , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Email" ] { url = "mailto:kaleblucasalves@", label = faIcon "far fa-envelope" }
+        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "LinkedIn" ] { url = "https://www.linkedin.com/company/fissioncodes/", label = faIcon "fab fa-linkedin-in" }
         ]
 
 
