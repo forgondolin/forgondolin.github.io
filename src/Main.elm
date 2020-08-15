@@ -53,19 +53,11 @@ type Msg
     = SetTheme Theme
 
 
-
--- UPDATE
-
-
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         SetTheme t ->
             ( { model | theme = t }, Cmd.none )
-
-
-
--- SUBSCRIPTIONS
 
 
 subscriptions : Model -> Sub Msg
@@ -74,12 +66,9 @@ subscriptions _ =
 
 
 
--- VIEW
-
-
 view : Model -> Browser.Document Msg
 view model =
-    { title = "Kaleb Alves | forgondolin"
+    { title = "Tom Bombadil | Forn"
     , body = [ viewBody model ]
     }
 
@@ -90,7 +79,7 @@ viewBody model =
         palette =
             getPalette model
     in
-    layout [ Font.family [ Font.typeface "Open Sans", Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
+    layout [ Font.family [ Font.typeface "Helvetica", Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
         column
             -- Card with shadow
             [ centerX
@@ -106,7 +95,7 @@ viewBody model =
             -- Main content
             [ column [ centerX, centerY, spacing 42, paddingEach { edges | top = 10 }, Region.mainContent ]
                 [ image [ centerX, htmlAttribute <| class "headshot" ]
-                    { src = "public/picture1.jpg", description = "Kaleb Alves" }
+                    { src = "public/bombadil.jpg", description = "Tom Bombadil" }
 
                 -- h1 and h2
                 , column [ spacing 10, centerX, Font.center ]
