@@ -277,7 +277,7 @@ fissionColors =
 
     -- primary
     , cyan = rgb255 139 233 253
-    , green = rgb255 80 250 123
+    , darkBlue1 = rgb255 30 35 71
     , pink = rgb255 255 121 198
     , purple = rgb255 189 147 249
 
@@ -327,10 +327,10 @@ paletteFission =
     { outerBg = fissionColors.bgLight
     , cardBg = fissionColors.bg
     , defaultText = fissionColors.text
-    , titleText = fissionColors.green
+    , titleText = fissionColors.darkBlue1
     , secondaryText = fissionColors.pink
     , footerText = fissionColors.comment
-    , icon = fissionColors.green
+    , icon = fissionColors.darkBlue1
     , link = fissionColors.purple
     , linkHover = fissionColors.cyan
     , svgColorString = fissionColors.svgColorString
