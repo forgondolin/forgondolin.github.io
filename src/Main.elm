@@ -271,7 +271,7 @@ darkBlue =
 
 fissionColors =
     { -- core
-      bg = rgb255 255 82 116
+      bg = rgb255 30 35 71
     , bgLight = rgb255 100 70 250
     , text = rgb255 248 248 242
 
