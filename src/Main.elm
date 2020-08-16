@@ -33,7 +33,8 @@ type alias Palette =
     , icon : Color
     , link : Color
     , linkHover : Color
-    , svgColorString : String 
+    , svgColorString : String
+    , bgimage : String 
     }
 
 
@@ -304,6 +305,7 @@ paletteLight =
     , link = darkBlue
     , linkHover = fissionColors.purple
     , svgColorString = greyString
+    , bgimage = "snake_case.png"
     }
 
 
@@ -319,6 +321,7 @@ paletteDark =
     , link = rgb255 51 179 166
     , linkHover = fissionColors.cyan
     , svgColorString = greyString
+    , bgimage = "snake_case.png"
     }
 
 
@@ -334,6 +337,7 @@ paletteFission =
     , link = fissionColors.purple
     , linkHover = fissionColors.cyan
     , svgColorString = fissionColors.svgColorString
+    , bgimage = "snake_case.png"
     }
 
 
