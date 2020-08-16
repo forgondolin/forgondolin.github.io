@@ -89,7 +89,6 @@ viewBody model =
             , paddingEach { left = 10, right = 10, top = 10, bottom = 10 }
             , Border.color (rgb255 219 219 219)
             , Border.shadow { blur = 20, color = rgba 0 0 0 0.1, offset = ( 0, 0 ), size = 1 }
-            , Background.color palette.cardBg
             , Background.image "snake_case.png"
             , spacing 42
             ]
