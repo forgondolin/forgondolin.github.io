@@ -91,6 +91,7 @@ viewBody model =
             , Border.color (rgb255 219 219 219)
             , Border.shadow { blur = 20, color = rgba 0 0 0 0.1, offset = ( 0, 0 ), size = 1 }
             , Background.image "snake_case.png"
+            , Background.opacity 0.4
             , spacing 42
             ]
             -- Main content
