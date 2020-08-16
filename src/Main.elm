@@ -68,7 +68,7 @@ subscriptions _ =
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = " Fission | Codes"
+    { title = "Fission | Codes"
     , body = [ viewBody model ]
     }
 
@@ -79,7 +79,7 @@ viewBody model =
         palette =
             getPalette model
     in
-    layout [ Font.family [ Font.typeface "Work Sans", Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
+    layout [ Font.family [ Font.typeface "Helvetica", Font.sansSerif ], Background.image palette.outerBg, Font.color palette.defaultText ] <|
         column
             -- Card with shadow
             [ centerX
