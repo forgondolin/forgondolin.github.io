@@ -105,7 +105,7 @@ viewBody model =
 
                 -- Intro paragraph
                 , paragraph [ Font.center, Font.light, paddingXY 20 0, Font.size 15, centerX, spacing 10 ]
-                    [ text "" ]
+                    [ text "Fission is platform that works hard to make your deploy easier!" ]
 
                 -- Social Links (icons)
                 , viewSocialLinks model
