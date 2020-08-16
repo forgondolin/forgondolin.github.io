@@ -80,7 +80,7 @@ viewBody model =
         palette =
             getPalette model
     in
-    layout [ Font.family [ Font.typeface "Helvetica", Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
+    layout [ Font.family [ Font.typeface "Space Mono", Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
         column
             -- Card with shadow
             [ centerX

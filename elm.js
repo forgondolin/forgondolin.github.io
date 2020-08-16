@@ -11592,7 +11592,7 @@ var $author$project$Main$viewBody = function (model) {
 				$mdgriffith$elm_ui$Element$Font$family(
 				_List_fromArray(
 					[
-						$mdgriffith$elm_ui$Element$Font$typeface('Helvetica'),
+						$mdgriffith$elm_ui$Element$Font$typeface('Space Mono'),
 						$mdgriffith$elm_ui$Element$Font$sansSerif
 					])),
 				$mdgriffith$elm_ui$Element$Background$color(palette.outerBg),
