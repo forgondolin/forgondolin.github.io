@@ -11,3 +11,18 @@ a.underline-link {
 .fissionIcon {
   padding-left: 8px;
 }
+
+.body {
+  background-image: url("./snake_case.png");
+  position: relative;
+  opacity: .4;
+}
+
+.layer {
+  background-color: rgba(245, 216, 248, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
