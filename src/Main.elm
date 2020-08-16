@@ -95,7 +95,7 @@ viewBody model =
             -- Main content
             [ column [ centerX, centerY, spacing 42, paddingEach { edges | top = 10 }, Region.mainContent ]
                 [ image [ centerX, htmlAttribute <| class "headshot" ]
-                    { src = "public/fission.jpg", description = "Fission" }
+                    { src = "public/fission.png", description = "Fission" }
 
                 -- h1 and h2
                 , column [ spacing 10, centerX, Font.center ]
