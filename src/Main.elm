@@ -68,7 +68,7 @@ subscriptions _ =
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = " | Fission"
+    { title = " Fission | Codes"
     , body = [ viewBody model ]
     }
 
@@ -90,6 +90,7 @@ viewBody model =
             , Border.color (rgb255 219 219 219)
             , Border.shadow { blur = 20, color = rgba 0 0 0 0.1, offset = ( 0, 0 ), size = 1 }
             , Background.color palette.cardBg
+            , Background.image "snake_case.png"
             , spacing 42
             ]
             -- Main content
