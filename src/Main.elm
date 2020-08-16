@@ -359,7 +359,7 @@ svgLightbulb model =
 -- Fission Icon: 
 
 
-{-| svgFission : Html.Html Msg
+{- svgFission : Html.Html Msg
 svgFission =
     Svg.svg
         [ Svg.Attributes.x "0px"
