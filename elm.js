@@ -10733,6 +10733,7 @@ var $author$project$Main$grey = A3($mdgriffith$elm_ui$Element$rgb255, 170, 170, 
 var $author$project$Main$greyString = 'rgb(170, 170, 170)';
 var $author$project$Main$white = A3($mdgriffith$elm_ui$Element$rgb255, 255, 255, 255);
 var $author$project$Main$paletteDark = {
+	bgimage: 'snake_case.png',
 	cardBg: A3($mdgriffith$elm_ui$Element$rgb255, 8, 8, 8),
 	defaultText: $author$project$Main$white,
 	footerText: $author$project$Main$grey,
@@ -10744,9 +10745,10 @@ var $author$project$Main$paletteDark = {
 	svgColorString: $author$project$Main$greyString,
 	titleText: $author$project$Main$white
 };
-var $author$project$Main$paletteFission = {cardBg: $author$project$Main$fissionColors.bg, defaultText: $author$project$Main$fissionColors.text, footerText: $author$project$Main$fissionColors.comment, icon: $author$project$Main$fissionColors.darkBlue1, link: $author$project$Main$fissionColors.purple, linkHover: $author$project$Main$fissionColors.cyan, outerBg: $author$project$Main$fissionColors.bgLight, secondaryText: $author$project$Main$fissionColors.pink, svgColorString: $author$project$Main$fissionColors.svgColorString, titleText: $author$project$Main$fissionColors.darkBlue1};
+var $author$project$Main$paletteFission = {bgimage: 'snake_case.png', cardBg: $author$project$Main$fissionColors.bg, defaultText: $author$project$Main$fissionColors.text, footerText: $author$project$Main$fissionColors.comment, icon: $author$project$Main$fissionColors.darkBlue1, link: $author$project$Main$fissionColors.purple, linkHover: $author$project$Main$fissionColors.cyan, outerBg: $author$project$Main$fissionColors.bgLight, secondaryText: $author$project$Main$fissionColors.pink, svgColorString: $author$project$Main$fissionColors.svgColorString, titleText: $author$project$Main$fissionColors.darkBlue1};
 var $author$project$Main$darkBlue = A3($mdgriffith$elm_ui$Element$rgb255, 0, 0, 139);
 var $author$project$Main$paletteLight = {
+	bgimage: 'snake_case.png',
 	cardBg: $author$project$Main$white,
 	defaultText: $author$project$Main$black,
 	footerText: $author$project$Main$grey,
@@ -11692,7 +11694,7 @@ var $author$project$Main$viewBody = function (model) {
 								]),
 							_List_fromArray(
 								[
-									$mdgriffith$elm_ui$Element$text('Fission is platform that works hard to make your deploy easier!')
+									$mdgriffith$elm_ui$Element$text('Fission is a platform that works hard to make your deploy easier!')
 								])),
 							$author$project$Main$viewSocialLinks(model)
 						])),
