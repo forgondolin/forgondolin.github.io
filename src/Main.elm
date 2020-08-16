@@ -99,13 +99,13 @@ viewBody model =
 
                 -- h1 and h2
                 , column [ spacing 10, centerX, Font.center ]
-                    [ el [ Region.heading 1, Font.size 48, centerX, Font.color palette.titleText ] <| text ""
+                    [ el [ Region.heading 1, Font.size 48, centerX, Font.color palette.titleText ] <| text "Fission Codes"
                     , el [ Region.heading 2, Font.size 20, centerX, Font.light, Font.italic, Font.color palette.secondaryText ] <| getSubtitle model
                     ]
 
                 -- Intro paragraph
                 , paragraph [ Font.center, Font.light, paddingXY 20 0, Font.size 15, centerX, spacing 10 ]
-                    [ text "Fission is platform that works hard to make your deploy easier!" ]
+                    [ text "Fission is a platform that works hard to make your deploy easier!" ]
 
                 -- Social Links (icons)
                 , viewSocialLinks model

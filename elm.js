@@ -11665,7 +11665,7 @@ var $author$project$Main$viewBody = function (model) {
 											$mdgriffith$elm_ui$Element$centerX,
 											$mdgriffith$elm_ui$Element$Font$color(palette.titleText)
 										]),
-									$mdgriffith$elm_ui$Element$text('')),
+									$mdgriffith$elm_ui$Element$text('Fission Codes')),
 									A2(
 									$mdgriffith$elm_ui$Element$el,
 									_List_fromArray(
