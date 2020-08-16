@@ -34,6 +34,7 @@ type alias Palette =
     , link : Color
     , linkHover : Color
     , svgColorString : String
+    , bgImage : String 
     }
 
 
@@ -79,7 +80,7 @@ viewBody model =
         palette =
             getPalette model
     in
-    layout [ Font.family [ Font.typeface "Helvetica", Font.sansSerif ], Background.image palette.outerBg, Font.color palette.defaultText ] <|
+    layout [ Font.family [ Font.typeface "Helvetica", Font.sansSerif ], Background.image palette.bgImage, Font.color palette.defaultText ] <|
         column
             -- Card with shadow
             [ centerX
