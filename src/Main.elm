@@ -152,7 +152,7 @@ getSubtitle model =
             text "Fission Rocks"
 
         Fission ->
-            "Fission colors!"
+            text "Fission colors!"
 
 
 viewSocialLinks : Model -> Element Msg
