@@ -68,7 +68,7 @@ subscriptions _ =
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = " | Forn"
+    { title = " | Fission"
     , body = [ viewBody model ]
     }
 
@@ -95,7 +95,7 @@ viewBody model =
             -- Main content
             [ column [ centerX, centerY, spacing 42, paddingEach { edges | top = 10 }, Region.mainContent ]
                 [ image [ centerX, htmlAttribute <| class "headshot" ]
-                    { src = "public/fission.jpg", description = "Tom Bombadil" }
+                    { src = "public/fission.jpg", description = "Fission" }
 
                 -- h1 and h2
                 , column [ spacing 10, centerX, Font.center ]
@@ -152,14 +152,14 @@ getSubtitle model =
             text "Fission Rocks"
 
         Dracula ->
-            newTabLink [ getLinkHover model ] { url = "https://draculatheme.com/", label = row [] [ text "Inspired by Dracula", html svgDracula ] }
+            "Fission colors!"
 
 
 viewSocialLinks : Model -> Element Msg
 viewSocialLinks model =
     row [ spacing 25, centerX ]
-        [ newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Fission Forum" ] { url = "https://talk.fission.codes/", label = faIcon "fab fa-medium-m" }
-        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Blog" ] { url = "https://blog.fission.codes/", label = faIcon "fab fa-instagram" }
+        [ newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Fission Forum" ] { url = "https://talk.fission.codes/", label = faIcon "fas fa-archive" }
+        , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Blog" ] { url = "https://blog.fission.codes/", label = faIcon "fab fa-blogger" }
         , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Github" ] { url = "https://github.com/fission-suite/", label = faIcon "fab fa-github" }
        -- , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "Email" ] { url = "mailto:kaleblucasalves@", label = faIcon "far fa-envelope" }
         , newTabLink [ getLinkHover model, getIconColor model, ariaLabel "LinkedIn" ] { url = "https://www.linkedin.com/company/fissioncodes/", label = faIcon "fab fa-linkedin-in" }
@@ -188,9 +188,9 @@ toggleTheme model =
             SetTheme Dark
 
         Dark ->
-            SetTheme Dracula
+            SetTheme Fission
 
-        Dracula ->
+        Fission ->
             SetTheme Light
 
 
@@ -203,8 +203,8 @@ getPalette model =
         Dark ->
             paletteDark
 
-        Dracula ->
-            paletteDracula
+        Fission ->
+            paletteFission
 
 
 getIconColor : Model -> Attribute Msg
@@ -266,7 +266,7 @@ darkBlue =
 
 
 
--- Dracula colors: https://github.com/dracula/dracula-theme#color-palette
+-- Fission Colors: https://talk.fission.codes/t/fission-branding/244
 
 
 draculaColors =
@@ -356,7 +356,7 @@ svgLightbulb model =
 
 
 
--- Dracula Icon: https://draculatheme.com/static/img/icons/dracula.svg
+-- Fission Icon: https://draculatheme.com/static/img/icons/dracula.svg
 
 
 svgDracula : Html.Html Msg
