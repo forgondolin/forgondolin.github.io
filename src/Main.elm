@@ -80,7 +80,7 @@ viewBody model =
         palette =
             getPalette model
     in
-    layout [ Font.family [ Font.typeface "Space Mono", Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
+    layout [ Font.family [ Font.external{ name = "Space Mono", url = "https://fonts.google.com/specimen/Space+Mono"} Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
         column
             -- Card with shadow
             [ centerX
@@ -226,7 +226,7 @@ getLinkHover model =
 main : Program () Model Msg
 main =
     Browser.document
-        { init = always ( { theme = Light }, Cmd.none )
+        { init = always ( { theme = Dark }, Cmd.none )
         , view = view
         , update = update
         , subscriptions = subscriptions
@@ -275,7 +275,7 @@ fissionColors =
     { -- core
       bg = rgb255 30 35 71
     , bgLight = rgb255 100 70 250
-    , text = rgb255 248 248 242
+    , text = rgb255 255 82 116
 
     -- primary
     , cyan = rgb255 139 233 253
