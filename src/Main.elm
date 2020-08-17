@@ -80,7 +80,7 @@ viewBody model =
         palette =
             getPalette model
     in
-    layout [ Font.family [ Font.external{ name = "Space Mono", url = "https://fonts.google.com/specimen/Space+Mono"} Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
+    layout [ Font.family [ Font.external{ name = "Space Mono", url = "https://fonts.google.com/specimen/Space+Mono"}, Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
         column
             -- Card with shadow
             [ centerX
@@ -90,8 +90,7 @@ viewBody model =
             , paddingEach { left = 10, right = 10, top = 10, bottom = 10 }
             , Border.color (rgb255 219 219 219)
             , Border.shadow { blur = 20, color = rgba 0 0 0 0.1, offset = ( 0, 0 ), size = 1 }
-            , Background.image "snake_case.png"
-            , Background.opacity 0.4
+            , Background.image "snake_case2.png"
             , spacing 42
             ]
             -- Main content

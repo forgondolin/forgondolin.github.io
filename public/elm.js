@@ -4472,7 +4472,7 @@ var $elm$core$Set$toList = function (_v0) {
 	return $elm$core$Dict$keys(dict);
 };
 var $elm$core$Basics$GT = {$: 'GT'};
-var $author$project$Main$Light = {$: 'Light'};
+var $author$project$Main$Dark = {$: 'Dark'};
 var $elm$core$Basics$always = F2(
 	function (a, _v0) {
 		return a;
@@ -10644,6 +10644,15 @@ var $mdgriffith$elm_ui$Element$el = F2(
 				_List_fromArray(
 					[child])));
 	});
+var $mdgriffith$elm_ui$Internal$Model$ImportFont = F2(
+	function (a, b) {
+		return {$: 'ImportFont', a: a, b: b};
+	});
+var $mdgriffith$elm_ui$Element$Font$external = function (_v0) {
+	var url = _v0.url;
+	var name = _v0.name;
+	return A2($mdgriffith$elm_ui$Internal$Model$ImportFont, name, url);
+};
 var $mdgriffith$elm_ui$Internal$Model$FontFamily = F2(
 	function (a, b) {
 		return {$: 'FontFamily', a: a, b: b};
@@ -10722,11 +10731,11 @@ var $author$project$Main$fissionColors = {
 	cyan: A3($mdgriffith$elm_ui$Element$rgb255, 139, 233, 253),
 	darkBlue1: A3($mdgriffith$elm_ui$Element$rgb255, 30, 35, 71),
 	orange: A3($mdgriffith$elm_ui$Element$rgb255, 255, 184, 108),
-	pink: A3($mdgriffith$elm_ui$Element$rgb255, 255, 121, 198),
+	pink: A3($mdgriffith$elm_ui$Element$rgb255, 255, 82, 116),
 	purple: A3($mdgriffith$elm_ui$Element$rgb255, 189, 147, 249),
 	red: A3($mdgriffith$elm_ui$Element$rgb255, 255, 85, 85),
 	svgColorString: 'rgb(98, 114, 164)',
-	text: A3($mdgriffith$elm_ui$Element$rgb255, 248, 248, 242),
+	text: A3($mdgriffith$elm_ui$Element$rgb255, 255, 82, 116),
 	yellow: A3($mdgriffith$elm_ui$Element$rgb255, 241, 250, 140)
 };
 var $author$project$Main$grey = A3($mdgriffith$elm_ui$Element$rgb255, 170, 170, 170);
@@ -10756,7 +10765,7 @@ var $author$project$Main$paletteLight = {
 	link: $author$project$Main$darkBlue,
 	linkHover: $author$project$Main$fissionColors.purple,
 	outerBg: A3($mdgriffith$elm_ui$Element$rgb255, 248, 249, 250),
-	secondaryText: $author$project$Main$grey,
+	secondaryText: $author$project$Main$black,
 	svgColorString: $author$project$Main$greyString,
 	titleText: $author$project$Main$black
 };
@@ -11460,8 +11469,8 @@ var $author$project$Main$svgLightbulb = function (model) {
 				_List_Nil)
 			]));
 };
-var $author$project$Main$Dark = {$: 'Dark'};
 var $author$project$Main$Fission = {$: 'Fission'};
+var $author$project$Main$Light = {$: 'Light'};
 var $author$project$Main$SetTheme = function (a) {
 	return {$: 'SetTheme', a: a};
 };
@@ -11476,7 +11485,6 @@ var $author$project$Main$toggleTheme = function (model) {
 			return $author$project$Main$SetTheme($author$project$Main$Light);
 	}
 };
-var $mdgriffith$elm_ui$Element$Font$typeface = $mdgriffith$elm_ui$Internal$Model$Typeface;
 var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
 var $author$project$Main$ariaLabel = function (label) {
 	return $mdgriffith$elm_ui$Element$htmlAttribute(
@@ -11592,7 +11600,8 @@ var $author$project$Main$viewBody = function (model) {
 				$mdgriffith$elm_ui$Element$Font$family(
 				_List_fromArray(
 					[
-						$mdgriffith$elm_ui$Element$Font$typeface('Space Mono'),
+						$mdgriffith$elm_ui$Element$Font$external(
+						{name: 'Space Mono', url: 'https://fonts.google.com/specimen/Space+Mono'}),
 						$mdgriffith$elm_ui$Element$Font$sansSerif
 					])),
 				$mdgriffith$elm_ui$Element$Background$color(palette.outerBg),
@@ -11619,7 +11628,7 @@ var $author$project$Main$viewBody = function (model) {
 						offset: _Utils_Tuple2(0, 0),
 						size: 1
 					}),
-					$mdgriffith$elm_ui$Element$Background$image('snake_case.png'),
+					$mdgriffith$elm_ui$Element$Background$image('snake_case2.png'),
 					$mdgriffith$elm_ui$Element$spacing(42)
 				]),
 			_List_fromArray(
@@ -11647,7 +11656,7 @@ var $author$project$Main$viewBody = function (model) {
 									$mdgriffith$elm_ui$Element$htmlAttribute(
 									$elm$html$Html$Attributes$class('headshot'))
 								]),
-							{description: 'Fission', src: 'public/fission.png'}),
+							{description: '', src: 'public/fission.png'}),
 							A2(
 							$mdgriffith$elm_ui$Element$column,
 							_List_fromArray(
@@ -11763,7 +11772,7 @@ var $author$project$Main$main = $elm$browser$Browser$document(
 	{
 		init: $elm$core$Basics$always(
 			_Utils_Tuple2(
-				{theme: $author$project$Main$Light},
+				{theme: $author$project$Main$Dark},
 				$elm$core$Platform$Cmd$none)),
 		subscriptions: $author$project$Main$subscriptions,
 		update: $author$project$Main$update,
