@@ -80,7 +80,7 @@ viewBody model =
         palette =
             getPalette model
     in
-    layout [ Font.family [ Font.external{ name = "Space Mono", url = "https://fonts.google.com/specimen/Space+Mono"}, Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
+    layout [ Font.family [ Font.external{ name = "Space Mono", url = "https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"}, Font.sansSerif ], Background.color palette.outerBg, Font.color palette.defaultText ] <|
         column
             -- Card with shadow
             [ centerX
