@@ -147,10 +147,10 @@ getSubtitle : Model -> Element Msg
 getSubtitle model =
     case model.theme of
         Light ->
-            text "Because Math"
+            text "Fission Rocks"
 
         Dark ->
-            text "Fission Rocks"
+            text "Because Math"
 
         Fission ->
             text "Fission colors!"
