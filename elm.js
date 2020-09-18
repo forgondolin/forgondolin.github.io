@@ -11223,7 +11223,7 @@ var $author$project$Main$getSubtitle = function (model) {
 	var _v0 = model.W;
 	switch (_v0) {
 		case 0:
-			return $mdgriffith$elm_ui$Element$text('Praise Bartosz Milewski');
+			return $mdgriffith$elm_ui$Element$text('Praise Functional Programming');
 		case 1:
 			return $mdgriffith$elm_ui$Element$text('IPFS is Life');
 		default:
